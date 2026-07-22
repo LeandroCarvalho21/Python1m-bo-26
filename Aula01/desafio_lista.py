@@ -9,7 +9,7 @@
 #5. Pesquisar se o jogador está no time, caso sim, mostrar o nome dele ex: "O jogador está no time"
 
 jogadores_titulares= ["Leandro","Bernardo", "Leonid","Deusdette"]
-novo_jogador=str(input("Digite o nome do jogador\n"))
+novo_jogador=str(input("Digite o nome do novo jogador\n"))
 jogadores_titulares.append(novo_jogador)
 print(f"O novo jogador escalado é: {novo_jogador}")
 if (len(jogadores_titulares)>=5):
@@ -18,7 +18,7 @@ if (len(jogadores_titulares)>=5):
 else:
     print("Time está incompleto")
 
-altera_jogador= str(input("Digite o nome do novo jogador: "))
+altera_jogador= str(input("Digite o nome do novo jogador para substituir pelo indice 0: "))
 jogadores_titulares[0]= altera_jogador
 print(f"o jogador do indice 0 foi substituido por {jogadores_titulares[0]}")
 print(f"Seleção atual formada por: {[jogadores_titulares]}")
