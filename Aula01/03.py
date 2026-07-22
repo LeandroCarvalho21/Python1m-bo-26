@@ -23,3 +23,17 @@ elif (media>=5):
 #ELSE fecha o bloco do if, so pode ter um
 else:
     print(f"sua média é{media}: Reprovado")
+
+#Time A
+#Time B
+#Criar um bloco de if para determinar qual time venceu, ou se houve um EMPATE
+
+timeA = int(input("Quantos gols o time A fez?"))
+timeB = int(input("Quantos gols o time B fez?"))
+
+if (timeA>timeB):
+    print(f"Time A venceu de: {timeA}x{timeB}")
+elif(timeA<timeB):
+    print(f"Time B venceu de: {timeB}x{timeA}")
+else:
+    print(f"Houve empate {timeB}x{timeA}")
