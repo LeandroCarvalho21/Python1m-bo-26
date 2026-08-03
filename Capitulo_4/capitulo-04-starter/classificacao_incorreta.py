@@ -26,6 +26,6 @@ altura = input("Digite a sua altura: ")
 if (not altura):
     print(f"Você não digitou a altura {altura}")
 else:
-    peso = float(input("Digite o peso"))
+    peso = float(input("Digite o peso: "))
 
 
