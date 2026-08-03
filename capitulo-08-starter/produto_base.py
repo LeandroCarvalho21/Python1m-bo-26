@@ -8,6 +8,30 @@ produto = {
                    ,"cidade": "Aluminio"}
 }
 
+# Exiba nome e quantidade.
+# Altere a quantidade para 15.
+# Adicione categoria e localização.
+# Consulte fornecedor com get() e padrão Não informado.
+# Percorra todos os pares com items().
+# Calcule o valor do estoque do produto.
+# Depois, acrescente um dicionário aninhado fornecedor com nome e cidade.
+
+#1
+print(produto.get("nome"), produto.get("quantidade"))
+
+#2
+produto["quantidade"] = 15
+print(produto.get("quantidade"))
+
+#3
+produto["localizacao"] = "jandira"
+
+#
+print(produto.get("fornecedor", "Não informado"))
+
+
+
+
 # Consulte, altere e complete o registro durante a prática.
 print(produto.get("nome"))
 print(produto.get("preco"))
@@ -46,7 +70,7 @@ garagem = [
       "km": 70000},
     
      {"modelo": "gol",
-      "cor": "azul",
+      "cor": "Azul",
       "km": 200000},
 ]
 
@@ -60,7 +84,13 @@ print(80*"=")
 
 
 for carro in garagem:
-    print(carro.get("modelo"))
+    #filtro
+    if carro.get("cor") == "preta":
+        print(carro.get("modelo"), carro.get("cor"))
+    else:
+        print("A cor não é preta")
+    
+print(carro.get("modelo"))
 
 
 # for i in produto:
