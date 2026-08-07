@@ -1,15 +1,26 @@
 [
-  {
-    "nome": "Caderno",
-    "categoria": "Papelaria",
-    "preco": 8.5,
-    "quantidade": 10
-  },
-  {
-    "nome": "Caneta",
-    "categoria": "Papelaria",
-    "preco": 3.2,
-    "quantidade": 5
-  }
+    {
+        "nome": "Caderno",
+        "categoria": "Papelaria",
+        "preco": 8.5,
+        "quantidade": 10
+    },
+    {
+        "nome": "Caneta",
+        "categoria": "Papelaria",
+        "preco": 3.2,
+        "quantidade": 5
+    },
+    {
+        "nome": "Borracha",
+        "categoria": "Papelaria",
+        "preco": 2.5,
+        "quantidade": 8
+    },
+    {
+        "nome": "canetão do joão ",
+        "categotia": null,
+        "preco": "5",
+        "quantidade": 10
+    }
 ]
-

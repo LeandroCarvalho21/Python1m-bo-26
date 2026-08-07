@@ -1,4 +1,0 @@
-nome Borracha
-categoria Papelaria
-preco 2.5
-quantidade 8
