@@ -9,8 +9,7 @@ def mostrar_menu():
     print("\n=======Opções=======\n 1 - Adição \n 2 - Subtração \n 3 - Multiplicação \n 4 - Divisão \n 0 - Sair \n")
     
 def pedir_numeros():    
-    num1 = float(input("Digite o primeiro número: "))
-    num2 = float(input("Digite o segundo número: "))
+    num1, num2 = float(input("Digite o primeiro número: ")), float(input("Digite o segundo número: ")) 
     return num1, num2
 
 def limpar_tela():
