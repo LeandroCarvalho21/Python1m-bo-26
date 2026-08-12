@@ -1,6 +1,9 @@
 #importando o modulo matematica com todas as funções
 from matematica import *
 import os
+from colorama import init, fore
+
+init()
 #importando modulo matematica e para usar preciso colocar matematica.nome_da_função 
 #exemplo matematica.soma(num1, num2)
 # import matematica
@@ -13,7 +16,7 @@ def pedir_numeros():
     return num1, num2
 
 def limpar_tela():
-    if os.name == "nt":
+    if os.name == 'nt':
         os.system('cls')
     else:
         os.system("clear")
