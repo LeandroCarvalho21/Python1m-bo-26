@@ -1,15 +1,16 @@
 #importando o modulo matematica com todas as funções
 from matematica import *
 import os
-from colorama import init, fore
+from colorama import init, Fore,Style
 
-init()
+init(autoreset=True)
+
 #importando modulo matematica e para usar preciso colocar matematica.nome_da_função 
 #exemplo matematica.soma(num1, num2)
 # import matematica
 
 def mostrar_menu():
-    print("\n=======Opções=======\n 1 - Adição \n 2 - Subtração \n 3 - Multiplicação \n 4 - Divisão \n 0 - Sair \n")
+    print(f"\n {Fore.GREEN} =======Opções=======\n{Fore.RED} 1 - Adição \n 2 - Subtração \n 3 - Multiplicação \n 4 - Divisão \n 5 - Pares\n 6 - impares \n 0 - Sair \n ")
     
 def pedir_numeros():    
     num1, num2 = float(input("Digite o primeiro número: ")), float(input("Digite o segundo número: ")) 
@@ -22,7 +23,7 @@ def limpar_tela():
         os.system("clear")
 
 def pause():
-    input("ENTER para continuar...")
+    input(f"{Fore.YELLOW}ENTER para continuar...")
 
 
 def main():
@@ -34,7 +35,7 @@ def main():
             num1,num2 = pedir_numeros()
             resultado_da_calculadora = somar(num1,num2)
             limpar_tela()   
-            print(F"A Adilção de {num1} + {num2} = {resultado_da_calculadora}")
+            print(F"{Style.BRIGHT} A Adilção de {num1} + {num2} = {resultado_da_calculadora}")
             pause()
         elif(resposta == '2'):
             num1,num2 = pedir_numeros()
@@ -57,9 +58,26 @@ def main():
             print(F"A Divisão de {num1} / {num2} = {resultado_da_calculadora}")
             pause()
             
+        elif(resposta == '5'):
+            num1,num2 = pedir_numeros()
+            resultado_da_calculadora = pares(num1,num2)
+            limpar_tela()   
+            for i in resultado_da_calculadora:
+                print(f"Número par: {Fore.GREEN} {i}")
+            pause()
+            
+        elif(resposta == '6'):
+            num1,num2 = pedir_numeros()
+            resultado_da_calculadora = impar(num1,num2)
+            limpar_tela()
+            for i in resultado_da_calculadora:
+                print(f"Número impar:{Fore.RED} {i}")   
+            pause()
+            
         elif(resposta == '0'):
             print(F"Saindo do sistema!")
             
         else:
             print ("Opção errada, tente novamente...")
+            pause()
 main()
