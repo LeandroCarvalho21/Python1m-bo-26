@@ -16,15 +16,15 @@ def pause():
 
 def main():
     mostrar_menu()
-    opcao = input("Digite uma opção: ")
+    opcao = input("Digite uma opção: ").strip()
       
     if (opcao == "1"):
         listar_alunos()
         pause()
                   
     elif (opcao == "2"):
-        nome = input("Digite seu Nome: ")
-        curso = input("Digite seu curso: ")
+        nome = input("Digite seu Nome: ").upper()
+        curso = input("Digite seu curso: ").upper()
         nota1 = input("Digite a Nota 1: ")
         nota2 = input("Digite a Nota 2: ")
         # if (nota1 <= 10 and nota2 <= 10)  
@@ -33,19 +33,19 @@ def main():
         pause()
        
     elif (opcao == "3"):
-        id_atual = input("Digite o id do aluno para excluir: ")
-        excluir(id_atual.strip())
+        id_atual = input("Digite o id do aluno para excluir: ").strip()
+        excluir(id_atual)
         pause()
        
     elif (opcao == "4"):
-        id_atual = input("Digite o id do aluno para atualizar: ")
+        id_atual = input("Digite o id do aluno para atualizar: ").strip()
         aluno_encontrado= buscar_aluno(id_atual)
         if aluno_encontrado:
-            nome = input("Digite o nome do aluno atualizado: ")
-            curso = input("Digite seu curso: ")
-            nota1 = input("Digite a Nota 1: ")
-            nota2 = input("Digite a Nota 2: ")
-            atualizando_aluno(id_atual.strip(), nome.strip(), curso.strip(), nota1.strip(),nota2.strip())
+            nome = input("Digite o nome do aluno atualizado: ").strip().upper()
+            curso = input("Digite seu curso: ").strip().upper()
+            nota1 = input("Digite a Nota 1: ").strip()
+            nota2 = input("Digite a Nota 2: ").strip()
+            atualizando_aluno(id_atual, nome, curso, nota1,nota2)
             print("Aluno atualizado com sucesso!!!")
         else:
             print("Aluno não encontrado!!!")
@@ -60,9 +60,7 @@ def main():
         pause()
     
     elif (opcao == "7"):
-        nome = input("Digite o nome do aluno: ")
-     
-
+        nome = input("Digite o nome do aluno: ").upper()
         situacao(nome)
         pause()
 

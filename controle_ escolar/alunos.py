@@ -73,7 +73,8 @@ def aprovados():
     for aluno in banco_de_dados:
         media = (float(aluno ['nota1'])+ float(aluno ['nota2'])) / 2
         if media >= 5:
-            print(f"{aluno['nome']} Média: {media}")
+            return aluno , media
+            # print(f"{aluno['nome']} Média: {media}")
        
         
 def reprovado():

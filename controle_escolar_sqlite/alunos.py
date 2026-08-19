@@ -103,9 +103,18 @@ def reprovados():
 
 def situacao(nome):
     conexao = conectar()
-    aluno = conexao.execute("SELECT * FROM ALUNOS WHERE nome = ? ",(nome,)).fetchone()
-    conexao.close()
-    print(f" Aluno: {aluno['nota1']}\n Curso: {aluno['curso']}\n ")
+    aluno = conexao.execute("SELECT * FROM ALUNOS WHERE nome = ? ",[nome]).fetchone()
+    if aluno:
+        media = (aluno ['nota1'] + aluno ['nota2']) / 2
+        situacao = 'Aprovado' if media >= 5 else 'Reprovado'
+        conexao.close()
+        print(f"ID: {aluno['id']}")
+        print(f"Nome: {aluno['nome']}")
+        print(f"Curso: {aluno['curso']}")
+        print(f"Média: {media}")
+        print(f"Situação: {situacao}")
+    else:
+        print("Aluno não encontrado")
     
     
             
